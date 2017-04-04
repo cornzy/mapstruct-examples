@@ -16,16 +16,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.mapstruct.example.dto;
+package org.mapstruct.example.mapper;
 
-import java.util.List;
+import org.mapstruct.InheritConfiguration;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.example.dto.SubSubCustomer;
+import org.mapstruct.example.dto.SubSubCustomerDto;
+import org.mapstruct.factory.Mappers;
 
-/**
- * @author Filip Hrisafov
- */
-public class CustomerDto {
+@Mapper(uses = { OrderItemMapper.class }, config = SubCustomerMapper.class)
+public interface SubSubCustomerMapper {
 
-	public Long id;
-	public String customerName;
-	public List<OrderItemDto> orders;
+	SubSubCustomerMapper MAPPER = Mappers.getMapper(SubSubCustomerMapper.class);
+
+	@InheritConfiguration
+	@Mapping(target = "irrelevantSubSubField", ignore = true)
+	SubSubCustomer toSubSubCustomer(SubSubCustomerDto customerDto);
+
 }

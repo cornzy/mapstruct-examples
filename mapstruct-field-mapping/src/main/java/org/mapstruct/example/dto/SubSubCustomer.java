@@ -18,14 +18,16 @@
  */
 package org.mapstruct.example.dto;
 
-import java.util.List;
+public class SubSubCustomer extends SubCustomer {
 
-/**
- * @author Filip Hrisafov
- */
-public class CustomerDto {
+	private String irrelevantSubSubField;
 
-	public Long id;
-	public String customerName;
-	public List<OrderItemDto> orders;
+	public String getIrrelevantSubSubField() {
+		return irrelevantSubSubField;
+	}
+
+	public void setIrrelevantSubSubField(String irrelvantSubSubField) {
+		this.irrelevantSubSubField = irrelvantSubSubField;
+	}
+
 }

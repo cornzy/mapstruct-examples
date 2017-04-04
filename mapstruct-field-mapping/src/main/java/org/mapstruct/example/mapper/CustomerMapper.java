@@ -36,7 +36,8 @@ public interface CustomerMapper {
 
     @Mappings({
         @Mapping(source = "orders", target = "orderItems"),
-        @Mapping(source = "customerName", target = "name")
+        @Mapping(source = "customerName", target = "name"),
+        @Mapping(target = "irrelevantField", ignore = true)
     })
     Customer toCustomer(CustomerDto customerDto);
 

@@ -25,31 +25,41 @@ import java.util.Collection;
  */
 public class Customer {
 
-    private Long id;
-    private String name;
-    private Collection<OrderItem> orderItems;
+	private Long id;
+	private String name;
+	private Collection<OrderItem> orderItems;
+	private String irrelevantField;
 
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public Collection<OrderItem> getOrderItems() {
-        return orderItems;
-    }
+	public Collection<OrderItem> getOrderItems() {
+		return orderItems;
+	}
 
-    public void setOrderItems(Collection<OrderItem> orderItems) {
-        this.orderItems = orderItems;
-    }
+	public void setOrderItems(Collection<OrderItem> orderItems) {
+		this.orderItems = orderItems;
+	}
+
+	public String getIrrelevantField() {
+		return irrelevantField;
+	}
+
+	public void setIrrelevantField(String irrelevantField) {
+		this.irrelevantField = irrelevantField;
+	}
+
 }
